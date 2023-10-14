@@ -2,3 +2,4 @@
 gowno
 nic nie zrobiłem 
 gowno
+essa
