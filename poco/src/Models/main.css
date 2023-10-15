@@ -1,0 +1,136 @@
+/* Importowanie czcionki */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+/* Resetowanie domyślnych stylów */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Zmienne kolorów */
+:root {
+    --mainColor: #0C2669;
+    --mainColorLight: #103183;
+    --secondaryColor: #5AF388;
+    --textColor: #eee;
+}
+
+/* Nagłówek */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+}
+
+/* Nawigacja */
+nav a {
+    margin: 0 2rem;
+    color: var(--textColor);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    color: var(--secondaryColor);
+}
+
+/* Przycisk nawigacji na małym ekranie */
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 2rem;
+}
+
+header div,
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Media query dla małych ekranów */
+@media only screen and (max-width: 1024px) {
+    /* Przycisk nawigacji na małym ekranie - widoczny */
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Nawigacja na małym ekranie */
+    header nav {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--mainColor);
+        transition: 1s;
+    }
+
+    header .responsive_nav{
+        transform: translateY(100vh);
+    }
+    /* Przycisk zamykania nawigacji na małym ekranie */
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    /* Stylizacja linków nawigacji na małym ekranie */
+    nav a {
+        font-size: 1.5rem;
+    }
+    
+}
+
+body {
+    background-color: var(--mainColorLight);
+}
+
+/* Stylizacja kontenera dla białych panelów */
+.white-panels-container {
+    display: flex;
+    justify-content: center; /* Wyśrodkuj poziomo */
+    align-items: center; /* Wyśrodkuj pionowo */
+    flex-direction: row; /* Ustaw poziomy układ */
+    margin-top: 80px; /* Odstęp od góry (wysokość nawigacji) */
+    margin-bottom: 20px; /* Dodatkowy odstęp między panelem a treścią strony */
+}
+
+/* Stylizacja białych panelów */
+.white-panel {
+    width: 400px; /* Dostosuj szerokość do potrzeb */
+    height: 500px; /* Ustaw wysokość taką samą jak szerokość */
+    background-color: rgba(255, 255, 255, 0.204); /* Kolor białego panelu */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    margin-left: 100px; /* Odstęp między panelami */
+    margin-top: 90px;
+    box-shadow: 0px 0px 10px rgba(0 , 0 ,0 , 0.7);
+}
+
+.white-panel-right {
+    width: 400px; /* Dostosuj szerokość do potrzeb */
+    height: 500px; /* Ustaw wysokość taką samą jak szerokość */
+    background-color: rgba(255, 255, 255, 0.204); /* Kolor białego panelu */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    margin-left: 400px; /* Odstęp między panelami */
+    margin-top: 90px;
+    box-shadow: 0px 0px 10px rgba(0 , 0 ,0 , 0.7);
+}
