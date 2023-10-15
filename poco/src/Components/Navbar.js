@@ -14,9 +14,12 @@ function Navbar() {
             <header>
                 <img src={logo}  alt="Logo"/>
                 <nav ref={navRef}>
-                    <a href="/Kalendarz">KALENDARZ</a>
-                    <a href="/#">KALKULATOR</a>
-                    <a href="/#">OSZCZĘDNOŚCI</a>
+                    <ul>
+                            <a href="/Home">Home</a>
+                            <a href="/Kalendarz">KALENDARZ</a>
+                            <a href="/Oszczednosci">OSZCZEDNOSCI</a>
+                            <a href="/Inwestowanie">INWESTOWANIE</a>
+                    </ul>
                     <button className="nav-btn nav-close-btn" onClick={showNavBar}>
                         <FaTimes/>
                     </button>

@@ -104,33 +104,3 @@ body {
     background-color: var(--mainColorLight);
 }
 
-/* Stylizacja kontenera dla białych panelów */
-.white-panels-container {
-    display: flex;
-    justify-content: center; /* Wyśrodkuj poziomo */
-    align-items: center; /* Wyśrodkuj pionowo */
-    flex-direction: row; /* Ustaw poziomy układ */
-    margin-top: 80px; /* Odstęp od góry (wysokość nawigacji) */
-    margin-bottom: 20px; /* Dodatkowy odstęp między panelem a treścią strony */
-}
-
-/* Stylizacja białych panelów */
-.white-panel {
-    width: 400px; /* Dostosuj szerokość do potrzeb */
-    height: 500px; /* Ustaw wysokość taką samą jak szerokość */
-    background-color: rgba(255, 255, 255, 0.204); /* Kolor białego panelu */
-    border-radius: 10px; /* Zaokrąglenie rogów */
-    margin-left: 100px; /* Odstęp między panelami */
-    margin-top: 90px;
-    box-shadow: 0px 0px 10px rgba(0 , 0 ,0 , 0.7);
-}
-
-.white-panel-right {
-    width: 400px; /* Dostosuj szerokość do potrzeb */
-    height: 500px; /* Ustaw wysokość taką samą jak szerokość */
-    background-color: rgba(255, 255, 255, 0.204); /* Kolor białego panelu */
-    border-radius: 10px; /* Zaokrąglenie rogów */
-    margin-left: 400px; /* Odstęp między panelami */
-    margin-top: 90px;
-    box-shadow: 0px 0px 10px rgba(0 , 0 ,0 , 0.7);
-}
