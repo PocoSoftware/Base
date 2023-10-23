@@ -1,3 +1,4 @@
+/* Zmienne kolorów */
 :root {
     --mainColor: #0C2669;
     --mainColorLight: #103183;
@@ -5,3 +6,96 @@
     --textColor: #eee;
 }
 
+/* Kalendarz */
+.css-1eurbeq-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+    background-color: var(--mainColorLight);
+    color: var(--textColor);
+}
+
+/* Ukrywanie tekstu */
+.css-1hbyad5-MuiTypography-root {
+    display: none !important;
+}
+
+/* Przyciski i akcje dialogu */
+.css-knqc4i-MuiDialogActions-root {
+    background-color: var(--mainColorLight);
+    color: var(--textColor) !important;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root { 
+    color: var(--textColor) !important;
+}
+
+/* Zawartość kalendarza */
+.css-16b5y55-MuiPickersLayout-contentWrapper {
+    background-color: var(--mainColorLight);
+    color: var(--textColor);
+    margin: 20px !important;
+}
+
+/* Przycisk zmiany widoku kalendarza */
+.css-12mkn7b-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton{
+    color: var(--textColor) !important;
+}
+
+/* Dni kalendarza */
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root {
+    color: var(--textColor) !important;
+    margin: 2px 2px !important;
+    font-size: 1.5rem;
+}
+
+/* Etykiety dni tygodnia */
+.css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel {
+    color: rgba(196, 196, 196, 0.547) !important;
+    font-size: 1.5rem !important;
+}
+
+/* Przycisk zmiany widoku kalendarza */
+.css-sf5j28-MuiButtonBase-root-MuiIconButton-root-MuiPickersCalendarHeader-switchViewButton {
+    color: var(--textColor) !important;
+}
+
+/* Dni kalendarza (nie wybrane) */
+.css-jgls56-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected){
+    color: var(--secondaryColor) !important;
+    border: none !important;
+    font-size: 1.5rem;
+}
+
+/* Przyciski zmiany daty */
+.css-kg9q0s-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+    color: var(--textColor) !important;
+    font-size: 1.5rem;
+}
+
+.css-1nkg345-MuiButtonBase-root-MuiIconButton-root-MuiPickersArrowSwitcher-button {
+    color: var(--textColor) !important;
+    font-size: 1.5rem;
+}
+
+/* Dodatkowy margines kalendarza */
+.css-1q04gal-MuiDateCalendar-root {
+    margin-left: 500px;
+} 
+
+/* Reset marginesu zawartości kalendarza */
+.css-16b5y55-MuiPickersLayout-contentWrapper {
+    margin: 0;
+}
+
+/* Tło kalendarza */
+.css-4pax7l-MuiPickersLayout-root{
+    background-color: var(--mainColorLight) !important;
+}
+
+/* Rozmiar czcionki dni kalendarza */
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root {
+    font-size: 1.5rem !important;
+}
+
+.css-jgls56-MuiButtonBase-root-MuiPickersDay-root {
+    font-size: 1.5rem !important;
+    margin-top: 0.5% !important;
+}
