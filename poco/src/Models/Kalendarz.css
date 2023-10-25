@@ -30,11 +30,19 @@
 
 /* Zawartość kalendarza */
 .css-16b5y55-MuiPickersLayout-contentWrapper {
-    background-color: var(--mainColorLight);
+    background-color: #0f296ab1;
     color: var(--textColor);
     margin: 20px !important;
     width: 300px;
     height: 300px;
+}
+
+.css-4pax7l-MuiPickersLayout-root .MuiPickersLayout-actionBar {
+    background-color:   var(--mainColor) ;
+} 
+
+.css-4pax7l-MuiPickersLayout-root .MuiPickersLayout-toolbar {
+    background-color:   var(--mainColor) ;
 }
 
 /* Przycisk zmiany widoku kalendarza */
@@ -81,6 +89,7 @@
 /* Dodatkowy margines kalendarza */
 .css-1q04gal-MuiDateCalendar-root {
     margin-left: 500px;
+    background-color: var(--mainColor);
 } 
 
 /* Reset marginesu zawartości kalendarza */
@@ -90,9 +99,10 @@
 
 /* Tło kalendarza */
 .css-4pax7l-MuiPickersLayout-root{
-    background-color: var(--mainColorLight) !important;
+    background-color: var(--mainColor)!important;
     width: 400px;
     height: 450px;
+    margin: 10px;
 }
 
 /* Rozmiar czcionki dni kalendarza */
@@ -113,22 +123,25 @@
   }
   
   .calendar {
-    border: 1px solid #ccc;
+    border: 1px solid var(--mainColor) !important;
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--mainColor)!important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.408);
+    margin-top: 50px !important;
   }
   
   /* Komentarze */
   .comments {
-    padding: 20px;
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f7f7f76e;
     border-radius: 5px;
     margin: 10px;
-    width: 300px;
+    width: 400px;
+    height: 100px;
+    color: var(--textColor);
+
   }
   
   .comment-entry {
@@ -138,6 +151,6 @@
   textarea {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #f7f7f76e;
     border-radius: 5px;
   }

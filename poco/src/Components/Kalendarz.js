@@ -45,7 +45,7 @@ export default function StaticDatePickerLandscape() {
                     />
                 </LocalizationProvider>
                 <div className="comments">
-                    <h2>Komentarze</h2>
+                    <h2>Komentarz</h2>
                     <textarea
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
