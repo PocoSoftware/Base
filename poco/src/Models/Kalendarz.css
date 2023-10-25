@@ -25,6 +25,7 @@
 
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root { 
     color: var(--textColor) !important;
+    display: none !important;
 }
 
 /* Zawartość kalendarza */
@@ -32,6 +33,8 @@
     background-color: var(--mainColorLight);
     color: var(--textColor);
     margin: 20px !important;
+    width: 300px;
+    height: 300px;
 }
 
 /* Przycisk zmiany widoku kalendarza */
@@ -88,6 +91,8 @@
 /* Tło kalendarza */
 .css-4pax7l-MuiPickersLayout-root{
     background-color: var(--mainColorLight) !important;
+    width: 400px;
+    height: 450px;
 }
 
 /* Rozmiar czcionki dni kalendarza */
@@ -99,3 +104,40 @@
     font-size: 1.5rem !important;
     margin-top: 0.5% !important;
 }
+
+/* Kalendarz */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .calendar {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Komentarze */
+  .comments {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .comment-entry {
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
