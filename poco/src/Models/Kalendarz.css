@@ -118,8 +118,9 @@
 /* Kalendarz */
 .calendar-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    margin-left: 30px;
   }
   
   .calendar {
@@ -129,19 +130,32 @@
     margin: 10px;
     background-color: var(--mainColor)!important;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.408);
-    margin-top: 50px !important;
+    margin-top: 40px !important;
   }
   
   /* Komentarze */
   .comments {
+    display: flex;
+    justify-content: center;
     padding: 10px;
-    background-color: #f7f7f76e;
+    background-color: var(--mainColor);
     border-radius: 5px;
     margin: 10px;
-    width: 400px;
-    height: 100px;
+    width: 360px;
+    height: 160px;
     color: var(--textColor);
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.408); 
 
+  }
+
+  .css-o943dk-MuiFormLabel-root-MuiInputLabel-root {
+    color: var(--textColor) !important;
+  }
+  .css-1pnmrwp-MuiTypography-root{
+    color: var(--textColor) !important;
   }
   
   .comment-entry {
@@ -153,4 +167,44 @@
     padding: 5px;
     border: 1px solid #f7f7f76e;
     border-radius: 5px;
+  }
+
+  .sidebar {
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    border-radius: 5px;
+    padding: 20px;
+    width: 200px; /* Dostosuj szerokość kontenera */
+    margin: 10px;
+  }
+
+  /* Cena i balans */
+  .price, .balance {
+    margin: 10px;
+  }
+
+  .css-1vbc0rj-MuiInputBase-input-MuiFilledInput-input {
+    width: 100px !important;
+    color: var(--textColor) !important;
+  }
+
+  .css-1iulo1y-MuiInputBase-root-MuiFilledInput-root {
+    width: 300px !important;
+    background-color: #eeeeee1f !important;
+    border-radius: 5px;
+  }
+
+  .css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
+    color:var(--secondaryColor);
+  }
+  .css-sghohy-MuiButtonBase-root-MuiButton-root {
+    margin-top: 20px !important;
+    margin-right: 25px !important;
+    width: 300px;
+  }
+
+  .sidebar {
+    margin-top: 40px !important;
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.408);
   }
