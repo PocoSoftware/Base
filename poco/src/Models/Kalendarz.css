@@ -144,7 +144,7 @@
     border-radius: 5px;
     margin: 10px;
     width: 360px;
-    height: 160px;
+    height: 220px;
     color: var(--textColor);
     margin-top: 40px;
     border-radius: 5px;
@@ -176,7 +176,7 @@
     color: var(--textColor);
     border-radius: 5px;
     padding: 20px;
-    width: 200px; /* Dostosuj szerokość kontenera */
+    width: 300px !important; /* Dostosuj szerokość kontenera */
     margin: 10px;
   }
 
@@ -211,3 +211,31 @@
     height: 160px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.408);
   }
+  .css-10botns-MuiInputBase-input-MuiFilledInput-input {
+    margin-top: 10px !important;
+    background-color: #eeeeee1f !important;
+    border-radius: 5px;
+    width: 280px !important;
+  }
+  .css-e4w4as-MuiFormLabel-root-MuiInputLabel-root {
+    display: none !important;
+  }
+  .css-10botns-MuiInputBase-input-MuiFilledInput-input{
+    color: var(--textColor) !important;
+  }
+  .css-9npbnl-MuiFormLabel-root-MuiInputLabel-root{
+  }
+
+  .entries-container {
+    display: flex;
+    flex-direction: column; /* Ustawienie flexbox na kolumnę, aby elementy były poniżej siebie */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    border-radius: 5px;
+    margin: 10px;
+    width: 360px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.408);
+    margin-top: 40px;
+}
