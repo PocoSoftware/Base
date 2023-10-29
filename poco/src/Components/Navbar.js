@@ -17,7 +17,7 @@ function Navbar() {
                     <ul>
                             <a href="/Home">Home</a>
                             <a href="/Kalendarz">KALENDARZ</a>
-                            <a href="/Oszczednosci">OSZCZEDNOSCI</a>
+                            <a href="/Oszczednosci">OSZCZĘDNOŚCI</a>
                             <a href="/Inwestowanie">INWESTOWANIE</a>
                     </ul>
                     <button className="nav-btn nav-close-btn" onClick={showNavBar}>

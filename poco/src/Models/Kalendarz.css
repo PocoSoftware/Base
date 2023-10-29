@@ -124,6 +124,8 @@
   }
   
   .calendar {
+    width: 450px;
+    height: 500px;
     border: 1px solid var(--mainColor) !important;
     border-radius: 5px;
     padding: 20px;
@@ -206,5 +208,6 @@
   .sidebar {
     margin-top: 40px !important;
     width: 250px;
+    height: 160px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.408);
   }
