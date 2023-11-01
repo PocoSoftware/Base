@@ -144,7 +144,7 @@
     border-radius: 5px;
     margin: 10px;
     width: 360px;
-    height: 220px;
+    height: 230px;
     color: var(--textColor);
     margin-top: 40px;
     border-radius: 5px;
@@ -194,6 +194,7 @@
     width: 300px !important;
     background-color: #eeeeee1f !important;
     border-radius: 5px;
+    margin-top: 5px;
   }
 
   .css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
@@ -229,13 +230,23 @@
   .entries-container {
     display: flex;
     flex-direction: column; /* Ustawienie flexbox na kolumnę, aby elementy były poniżej siebie */
-    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    align-items: flex-start; /* Wyśrodkowanie elementów w pionie */
     background-color: var(--mainColor);
     color: var(--textColor);
     border-radius: 5px;
     margin: 10px;
-    width: 360px;
+    width: 450px;
     padding: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.408);
     margin-top: 40px;
+    
+}
+
+.entries-container h2 {
+    text-align: left !important;
+
+}
+
+.wpisy {
+    margin-top: 10px;
 }

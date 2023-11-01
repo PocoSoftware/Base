@@ -15,7 +15,7 @@ function Navbar() {
                 <img src={logo}  alt="Logo"/>
                 <nav ref={navRef}>
                     <ul>
-                            <a href="/Home">Home</a>
+                            <a href="/Home">HOME</a>
                             <a href="/Kalendarz">KALENDARZ</a>
                             <a href="/Oszczednosci">OSZCZĘDNOŚCI</a>
                             <a href="/Inwestowanie">INWESTOWANIE</a>

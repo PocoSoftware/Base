@@ -16,7 +16,7 @@ export default function StaticDatePickerLandscape() {
   const [balance, setBalance] = React.useState(0);
   const [selectedCategoryDate, setSelectedCategoryDate] = React.useState(null);
   const [categories, setCategories] = React.useState({});
-  const [entry, setEntry] = React.useState({ price: 0, category: '' });
+  const [entry, setEntry] = React.useState({ date: null, price: 0, category: '' });
   const [entries, setEntries] = React.useState([]);
 
   const handleEntryChange = (e) => {
@@ -40,10 +40,8 @@ export default function StaticDatePickerLandscape() {
     setPrice(comments[date] || 0);
     setEntry((prevEntry) => ({
       ...prevEntry,
+      date: date,
       price: comments[date] || 0,
-    }));
-    setEntry((prevEntry) => ({
-      ...prevEntry,
       category: categories[date] || '',
     }));
   };
@@ -69,30 +67,31 @@ export default function StaticDatePickerLandscape() {
     setEntry((prevEntry) => ({
       ...prevEntry,
       price: comments[date] || 0,
-    }));
-    setEntry((prevEntry) => ({
-      ...prevEntry,
       category: categories[date] || '',
     }));
   };
 
   const addEntry = () => {
     if (entry.price !== 0 || entry.category !== '') {
-      const newEntry = { date: selectedCategoryDate, price: entry.price, category: entry.category };
+      const newEntry = {
+        date: selectedCategoryDate || selectedDate,
+        price: entry.price,
+        category: entry.category,
+      };
       setEntries([...entries, newEntry]);
 
       setComments({
         ...comments,
-        [selectedCategoryDate]: entry.price,
+        [selectedCategoryDate || selectedDate]: entry.price,
       });
       setCategories({
         ...categories,
-        [selectedCategoryDate]: entry.category,
+        [selectedCategoryDate || selectedDate]: entry.category,
       });
 
       // Zaktualizuj balans po dodaniu wpisu
       updateBalance();
-      setEntry({ price: 0, category: '' });
+      setEntry({ date: null, price: 0, category: '' });
     }
   };
 
@@ -136,11 +135,11 @@ export default function StaticDatePickerLandscape() {
           </FormControl>
         </div>
         <div className="entries-container">
-          <h2>Wpisy:</h2>
+          <h2>WPISY:</h2>
           <ul>
             {entries.map((entry, index) => (
-              <li key={index}>
-                Cena: {entry.price} PLN, Kategoria: {entry.category}
+              <li key={index} className='wpisy'>
+                Data: {entry.date.format('YYYY-MM-DD')}, Cena: {entry.price} PLN, Kategoria: {entry.category}
               </li>
             ))}
           </ul>
