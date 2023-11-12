@@ -1,27 +1,153 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
-export const Register = (props) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
+const Register = () => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
+    const [id, idchange] = useState("");
+    const [name, namechange] = useState("");
+    const [password, passwordchange] = useState("");
+    const [email, emailchange] = useState("");
+    const [phone, phonechange] = useState("");
+    const [country, countrychange] = useState("");
+    const [address, addresschange] = useState("");
+    const [gender, genderchange] = useState("female");
+
+    const navigate = useNavigate();
+
+    const IsValidate = () => {
+        let isproceed = true;
+        let errormessage = 'Please enter the value in ';
+        if (id === null || id === '') {
+            isproceed = false;
+            errormessage += ' Username';
+        }
+        if (name === null || name === '') {
+            isproceed = false;
+            errormessage += ' Fullname';
+        }
+        if (password === null || password === '') {
+            isproceed = false;
+            errormessage += ' Password';
+        }
+        if (email === null || email === '') {
+            isproceed = false;
+            errormessage += ' Email';
+        }
+
+        if(!isproceed){
+            toast.warning(errormessage)
+        }else{
+            if(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)){
+
+            }else{
+                isproceed = false;
+                toast.warning('Please enter the valid email')
+            }
+        }
+        return isproceed;
     }
 
+
+    const handlesubmit = (e) => {
+            e.preventDefault();
+            let regobj = { id, name, password, email, phone, country, address, gender };
+            if (IsValidate()) {
+            //console.log(regobj);
+            fetch("http://localhost:8000/user", {
+                method: "POST",
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(regobj)
+            }).then((res) => {
+                toast.success('Registered successfully.')
+                navigate('/login');
+            }).catch((err) => {
+                toast.error('Failed :' + err.message);
+            });
+        }
+    }
     return (
-        <>
-        <form onSubmit={handleSubmit}>
-            <label>Full name</label>
-            <input value={name} name="name" id="name" placeholder="full Name"/>
-            <label htmlFor="email">email</label>
-            <input value={email} type="email" placeholder="youremail@gmail.com" id="email" name="email"/>
-            <label htmlFor="password">password</label>
-            <input value={password} type="password" placeholder="*********" id="password" name="password"/>
-            <button type="submit">Register</button>
-        </form>
-        <button onClick={() => props.onFormSwitch("login")}>Already have an account? Login here.</button>
-        </>
+        <div>
+            <div className="offset-lg-3 col-lg-6">
+                <form className="container" onSubmit={handlesubmit}>
+                    <div className="card">
+                        <div className="card-header">
+                            <h1>Rejestracja</h1>
+                        </div>
+                        <div className="card-body">
+
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Nazwa <span className="errmsg">*</span></label>
+                                        <input value={id} onChange={e => idchange(e.target.value)} className="form-control"></input>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Hasło <span className="errmsg">*</span></label>
+                                        <input value={password} onChange={e => passwordchange(e.target.value)} type="password" className="form-control"></input>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Imie i Nazwisko <span className="errmsg">*</span></label>
+                                        <input value={name} onChange={e => namechange(e.target.value)} className="form-control"></input>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Email <span className="errmsg">*</span></label>
+                                        <input value={email} onChange={e => emailchange(e.target.value)} className="form-control"></input>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Numer Telefonu <span className="errmsg"></span></label>
+                                        <input value={phone} onChange={e => phonechange(e.target.value)} className="form-control"></input>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Kraj <span className="errmsg">*</span></label>
+                                        <select value={country} onChange={e => countrychange(e.target.value)} className="form-control">
+                                            <option value="Polska">Polska</option>
+                                            <option value="Niemcy">Niemcy</option>
+                                            <option value="francja">Francja</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="col-lg-12">
+                                    <div className="form-group">
+                                        <label>Adres</label>
+                                        <textarea value={address} onChange={e => addresschange(e.target.value)} className="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="form-group">
+                                        <label>Płeć</label>
+                                        <br></br>
+                                        <input type="radio" checked={gender === 'male'} onChange={e => genderchange(e.target.value)} name="gender" value="male" className="app-check"></input>
+                                        <label>Meżczyzna</label>
+                                        <input type="radio" checked={gender === 'female'} onChange={e => genderchange(e.target.value)} name="gender" value="female" className="app-check"></input>
+                                        <label>Kobieta</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div className="card-footer">
+                            <button type="submit" className="btn btn-primary">Register</button> |
+                            <Link to={'/login'} className="btn btn-danger">Close</Link>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
     );
-};
+}
+
+export default Register;

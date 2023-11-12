@@ -1,52 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import Navbar from "./Components/Navbar";
-import Home from "./Components/Home"
-import Inwestowanie from "./Components/Inwestowanie"
-import Kalendarz from "./Components/Kalendarz"
-import Oszczednosci from "./Components/Oszczednosci"
-import { Login } from "./Components/Login";
-import { Register } from "./Components/Register";
-
+import Home from "./Components/Home";
+import Kalendarz from "./Components/Kalendarz";
+import Oszczednosci from "./Components/Oszczednosci";
+import Inwestowanie from "./Components/Inwestowanie";
+import Customer from './Components/Customer';
+import Login from './Components/Login';
+import Register from './Components/Register';
 
 function App() {
-  let component;
-  switch (window.location.pathname) {
-    case "/":
-      break;
-    case "/Home":
-      component = <Home />;
-      break;
-    case "/Kalendarz":
-      component = <Kalendarz />;
-      break;
-    case "/Oszczednosci":
-      component = <Oszczednosci />;
-      break;
-    case "/Inwestowanie":
-      component = <Inwestowanie />;
-      break;
-    default:
-      // Obsługa przypadku, gdy ścieżka URL nie pasuje do żadnej z powyższych
-      // Możesz tu np. wyrenderować komunikat o błędzie lub przekierować na stronę domową.
-      break;
-  }
-
-  const [currentForm, setCurrentForm] = useState('login');
-
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  }
-
-
   return (
-    <React.Fragment>
-      <Navbar />
-      {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} /> 
-      }
-      {component}
-    </React.Fragment>
-  )
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/customer' element={<Customer />} />
+          <Route path="/Kalendarz" element={<Kalendarz />} />
+          <Route path="/Oszczednosci" element={<Oszczednosci />} />
+          <Route path="/Inwestowanie" element={<Inwestowanie />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
