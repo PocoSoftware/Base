@@ -175,6 +175,16 @@
       "country": "",
       "address": "",
       "gender": "male"
+    },
+    {
+      "id": "Maciek",
+      "name": "Macik Klanowski",
+      "password": "gowno",
+      "email": "mbasia76@gmail.pl",
+      "phone": "503223111",
+      "country": "",
+      "address": "os.Lecha",
+      "gender": "male"
     }
   ]
 }

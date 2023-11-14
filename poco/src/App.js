@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Kalendarz from "./Components/Kalendarz";

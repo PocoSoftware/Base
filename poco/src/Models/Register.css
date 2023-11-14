@@ -1,0 +1,89 @@
+/* Register.css */
+:root {
+    --mainColor: #0C2669;
+    --mainColorLight: #103183;
+    --secondaryColor: #5AF388;
+    --textColor: #eee;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.errmsg {
+    color: red;
+}
+
+.card-footer {
+    background-color: var(--mainColor);
+    padding: 15px;
+    text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+}
+
+.btn-primary {
+    margin-right: 0.2rem;
+    color: var(--textColor);
+    background-color: var(--mainColor);
+    border: none;
+}
+
+.btn-primary:hover {
+    box-sizing: border-box;
+    background-color: #0056b3;
+    border: 1px solid #0056b3;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    margin-left: 0.4rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+}
+
+.btn-danger:hover {
+    background-color: #d9534f;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+}

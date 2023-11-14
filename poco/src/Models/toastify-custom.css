@@ -1,0 +1,9 @@
+/* toastify-custom.css */
+
+.Toastify__toast {
+    font-size: 14px; /* Dostosuj rozmiar czcionki */
+  }
+  
+  .Toastify__toast-container {
+    width: 300px; /* Dostosuj szerokość kontenera */
+  }
